@@ -1,0 +1,242 @@
+/* 生活习惯建议页面样式 */
+
+/* 姿势提醒计时器样式 */
+.posture-timer {
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  margin: 30px 0;
+  text-align: center;
+  box-shadow: var(--shadow);
+  color: var(--white);
+}
+
+.posture-timer h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-family: var(--font-heading);
+}
+
+.posture-timer p {
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.timer-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.timer-display {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 20px 0;
+  color: var(--white);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-family: monospace;
+}
+
+.timer-button {
+  padding: 12px 25px;
+  background-color: var(--white);
+  color: var(--primary-dark);
+  border: 2px solid var(--white);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.timer-button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
+}
+
+.timer-button.active {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  border-color: var(--primary-dark);
+}
+
+.timer-actions {
+  margin-top: 20px;
+}
+
+.timer-tip {
+  margin-top: 20px;
+  font-style: italic;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.timer-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--primary-dark);
+  color: var(--white);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: none;
+  max-width: 350px;
+}
+
+.timer-notification.show {
+  display: block;
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 姿势指南样式 */
+.posture-guides {
+  margin-bottom: 40px;
+}
+
+.posture-guide {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 25px;
+  margin-bottom: 30px;
+  transition: var(--transition);
+  border-top: 4px solid var(--primary-color);
+}
+
+.posture-guide:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+
+.posture-guide h3 {
+  color: var(--primary-dark);
+  margin-bottom: 15px;
+  font-family: var(--font-heading);
+}
+
+.guide-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.guide-content img {
+  width: 250px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.posture-guide:hover .guide-content img {
+  transform: scale(1.03);
+}
+
+.guide-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.guide-text h4 {
+  margin: 15px 0 10px;
+  color: var(--primary-color);
+  font-family: var(--font-heading);
+}
+
+.guide-text ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.guide-text ul li {
+  margin-bottom: 5px;
+}
+
+/* 睡眠与体态样式 */
+.sleep-posture {
+  margin-bottom: 40px;
+}
+
+.sleep-guide,
+.mattress-guide,
+.sleep-importance {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 25px;
+  margin-bottom: 30px;
+  transition: var(--transition);
+}
+
+.sleep-guide {
+  border-left: 4px solid var(--primary-color);
+}
+
+.mattress-guide {
+  border-left: 4px solid var(--secondary-color);
+}
+
+.sleep-importance {
+  border-left: 4px solid var(--accent-color);
+}
+
+.sleep-guide:hover,
+.mattress-guide:hover,
+.sleep-importance:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateX(3px);
+}
+
+.sleep-importance ul {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.sleep-importance ul li {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .guide-content,
+  .case-content,
+  .mistake-content,
+  .story-content {
+    flex-direction: column;
+  }
+
+  .guide-content img,
+  .case-content img,
+  .mistake-content img,
+  .story-content img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 15px;
+  }
+
+  .timer-display {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timer-controls {
+    flex-direction: column;
+  }
+
+  .timer-button {
+    width: 100%;
+  }
+}

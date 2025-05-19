@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="zh-CN"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>青少年体态健康 - 首页</title>    <link rel="stylesheet" href="css/common.css">    <link rel="stylesheet" href="css/index.css">    <!-- 引入 ECharts 库 -->    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>    <!-- 引入 Swiper 库 -->    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>青少年体态健康中心</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">首页</a></li>
+                    <li><a href="pages/habits.html">生活习惯建议</a></li>
+                    <li><a href="pages/diet.html">饮食与体态</a></li>
+                    <li><a href="pages/fun-facts.html">趣味知识</a></li>
+                    <li><a href="pages/consultation.html">体态问题咨询</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>了解并改善你的体态问题</h2>
+                <p>良好的体态不仅能提升外表形象，更是健康的基础。我们致力于帮助青少年认识、预防和改善常见体态问题。</p>
+            </div>
+        </section>
+
+        <!-- 添加体态健康轮播图 -->
+        <section class="container swiper-section">
+            <h2 class="section-title">体态健康科普</h2>
+            
+            <div class="swiper health-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide-content">
+                            <img src="photos/sit.png" alt="正确坐姿示意图" style="width:250px; height: auto;">
+                            <h3>保持正确坐姿</h3>
+                            <!-- <p>保持正确的坐姿对预防脊柱问题至关重要。双脚平放在地面，背部挺直，肩膀放松，屏幕与眼睛平行。</p> -->
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-content">
+                            <img src="photos/bag.png" style="width:250px; height: auto;">
+                            <h3>正确背书包方式</h3>
+                            <!-- <p>选择双肩背包，调整肩带长度使书包贴近背部，避免单肩背负或书包过重，预防高低肩和脊柱侧弯。</p> -->
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-content">
+                            <img src="photos/usephone.png" style="width:250px; height: auto;">
+                            <h3>正确玩手机姿势</h3>
+                            <!-- <p>使用手机或平板电脑时，抬高设备高度，避免长时间低头，每使用30分钟休息5分钟，进行颈部拉伸。</p> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- 添加分页器 -->
+                <div class="swiper-pagination"></div>
+                <!-- 添加导航按钮 -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2 class="section-title">青少年体态问题数据分析</h2>
+            
+            <div class="data-visualization">
+                <div class="chart-container" id="posture-chart"></div>
+                
+                <div class="chart-description">
+                    <h3>数据解读</h3>
+                    <p>根据最新调查数据显示，青少年中常见的体态问题发生率较高，其中高低肩问题最为普遍，接近50%的青少年存在不同程度的高低肩现象。</p>
+                    <p>头前伸是第二常见的问题，主要与长时间低头使用电子设备有关。骨盆侧倾、胸椎曲度异常和腰椎曲度异常也有相当比例的发生率。</p>
+                    
+                    <h3>影响因素</h3>
+                    <ul>
+                        <li><strong>电子设备使用：</strong>长时间低头使用手机和平板电脑是导致头前伸和颈椎问题的主要原因。</li>
+                        <li><strong>学习姿势：</strong>不良的坐姿和长时间保持同一姿势学习是导致多种体态问题的重要因素。</li>
+                        <li><strong>运动不足：</strong>缺乏适当的体育锻炼导致核心肌群和背部肌肉力量不足，无法维持正确体态。</li>
+                        <li><strong>书包负重：</strong>过重的书包和单肩背包方式是导致高低肩和脊柱侧弯的常见原因。</li>
+                    </ul>
+                    
+                    <p>这些数据表明，青少年体态问题已成为一个不容忽视的健康问题，需要家长、学校和社会共同关注，通过改善生活习惯、增加适当运动和提高体态意识来预防和改善这些问题。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 青少年体态健康中心. 保留所有权利.</p>
+            <p>当前时间：<span id="footer-time"></span></p>
+        </div>
+    </footer>
+
+    <script src="js/common.js" defer></script>
+    <script src="js/index.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生活习惯建议 - 青少年体态健康</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/habits.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>青少年体态健康中心</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="habits.html" class="active">生活习惯建议</a></li>
+                    <li><a href="diet.html">饮食与体态</a></li>
+                    <li><a href="fun-facts.html">趣味知识</a></li>
+                    <li><a href="consultation.html">体态问题咨询</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>良好习惯，健康体态</h2>
+                <p>日常生活中的小习惯，决定了你的体态健康。让我们一起学习如何通过改善日常习惯来塑造健康体态。</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2 class="section-title">姿势提醒计时器</h2>
+
+            <div class="posture-timer">
+                <h3>定时提醒检查你的姿势</h3>
+                <p>长时间保持同一姿势会导致肌肉疲劳和体态问题。使用这个计时器来提醒自己定期调整姿势，活动身体。</p>
+
+                <div class="timer-display" id="timer-display">20:00</div>
+
+                <div class="timer-controls">
+                    <button class="timer-button active" data-time="20">20分钟</button>
+                    <button class="timer-button" data-time="30">30分钟</button>
+                    <button class="timer-button" data-time="45">45分钟</button>
+                    <button class="timer-button" data-time="60">60分钟</button>
+                    <button class="timer-button" id="custom-time">自定义</button>
+                    <button class="timer-button" id="test-timer">三秒测试</button> 
+                </div>
+
+                <div class="timer-actions">
+                    <button class="timer-button" id="start-timer">开始计时</button>
+                    <button class="timer-button" id="pause-timer">暂停</button>
+                    <button class="timer-button" id="reset-timer">重置</button>
+                </div>
+
+                <p class="timer-tip">提示：开始计时后，即使切换到其他页面，计时器也会继续运行并在时间到达时提醒你。</p>
+            </div>
+
+            <div class="timer-notification" id="timer-notification">
+                <h3>姿势提醒</h3>
+                <p>是时候检查你的姿势了！请站起来活动一下，调整坐姿。</p>
+                <button class="timer-button" id="close-notification">我知道了</button>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2 class="section-title">睡眠与体态</h2>
+
+            <div class="sleep-posture">
+                <div class="sleep-guide">
+                    <h3>正确的睡眠姿势</h3>
+                    <div class="guide-content">
+                        <img src="../photos/lie1.png" alt="睡眠姿势示意图">
+                        <div class="guide-text">
+                            <h4>最佳睡眠姿势：</h4>
+                            <ul>
+                                <li><strong>仰卧位（平躺）</strong>：使用适当高度的枕头，保持颈椎自然曲度；膝盖下可放置小枕头减轻腰部压力。</li>
+                                <li><strong>侧卧位</strong>：使用较高的枕头，保持颈椎与脊柱在一条直线上；双腿微屈，膝盖之间可放置小枕头。</li>
+                            </ul>
+                            <h4>不推荐的睡眠姿势：</h4>
+                            <ul>
+                                <li><strong>俯卧位（趴着睡）</strong>：会导致颈部扭转，增加颈椎和腰椎压力。</li>
+                                <li><strong>不规则姿势</strong>：如蜷缩成一团，长期可能导致脊柱变形。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mattress-guide">
+                    <h3>床垫与枕头选择</h3>
+                    <div class="guide-content">
+                        <img src="../photos/lie2.png" alt="床垫选择示意图">
+                        <div class="guide-text">
+                            <h4>床垫选择：</h4>
+                            <ul>
+                                <li>硬度适中，既不过软也不过硬</li>
+                                <li>能够支撑脊柱自然曲度</li>
+                                <li>根据体重和睡眠习惯选择合适的材质</li>
+                                <li>定期更换（一般5-8年）</li>
+                            </ul>
+                            <h4>枕头选择：</h4>
+                            <ul>
+                                <li>高度应使颈椎保持自然曲度</li>
+                                <li>仰卧时枕头高度约为5-10厘米</li>
+                                <li>侧卧时枕头高度约为10-15厘米</li>
+                                <li>材质应具有一定弹性和支撑力</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sleep-importance">
+                    <h3>睡眠对体态的重要性</h3>
+                    <p>充足的睡眠对青少年体态健康至关重要：</p>
+                    <ul>
+                        <li>睡眠期间是脊柱放松和恢复的重要时期</li>
+                        <li>生长激素主要在深度睡眠阶段分泌，对骨骼和肌肉发育至关重要</li>
+                        <li>良好的睡眠有助于肌肉恢复和修复</li>
+                        <li>睡眠不足会导致姿势控制能力下降，增加不良姿势的风险</li>
+                        <li>青少年每晚应保证8-10小时的睡眠时间</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 青少年体态健康中心. 保留所有权利.</p>
+            <p>当前时间：<span id="footer-time"></span></p>
+        </div>
+    </footer>
+
+    <script src="../js/common.js" defer></script>
+    <script src="../js/habits.js" defer></script>
+</body>
+
+</html>
