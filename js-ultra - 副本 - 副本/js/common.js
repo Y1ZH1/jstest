@@ -7,7 +7,7 @@ const updateFooterTime = () => {
     const footerTime = document.getElementById('footer-time');
     
     // 如果元素不存在，则直接返回（防御性编程）
-    if (!footerTime) return;
+    // if (!footerTime) return;
 
     /**
      * 更新时间显示的内部函数
@@ -46,12 +46,4 @@ const updateFooterTime = () => {
     
     // 如果需要停止定时器，可以调用 clearInterval(timeInterval);
 };
-
-// 当DOM内容加载完成后执行初始化
-document.addEventListener('DOMContentLoaded', () => {
-    // 调用页脚时间更新函数
     updateFooterTime();
-    
-    // 注意：这里可以添加其他初始化函数
-    // 例如：updateFooterTime() 和 initChat() 等
-});

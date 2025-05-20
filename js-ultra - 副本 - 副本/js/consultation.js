@@ -29,11 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // ========== 功能函数 ==========
     
-    /**
-     * 添加消息到聊天界面
-     * @param {string} role - 消息角色 ('user' 或 'ai')
-     * @param {string} content - 消息内容
-     */
     function addMessage(role, content) {
         // 创建消息div元素
         const messageDiv = document.createElement('div');

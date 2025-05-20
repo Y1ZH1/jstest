@@ -1,8 +1,6 @@
-// 趣味知识页面 JavaScript 文件
-
 // 等待DOM内容加载完成后执行
 document.addEventListener('DOMContentLoaded', () => {
-    // 体态问题列表
+    // 体态问题数据数组
     const postureProblems = [
         {
             title: "驼背",
@@ -31,36 +29,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    // 初始化问题列表
-    const initProblemsList = () => {
-        const problemsContainer = document.querySelector('.posture-problems');
-        
-        // 渲染问题卡片
-        problemsContainer.innerHTML = postureProblems.map(problem => `
-            <div class="problem-card">
-                <h3>${problem.title}</h3>
-                <p class="short-desc">${problem.shortDesc}</p>
-                <div class="problem-details hidden">
-                    <p>${problem.details}</p>
-                </div>
+    // 获取问题列表容器元素
+    const problemsContainer = document.querySelector('.posture-problems');
+    
+    // 渲染问题卡片
+    problemsContainer.innerHTML = postureProblems.map(problem => `
+        <div class="problem-card">
+            <h3>${problem.title}</h3>
+            <p class="short-desc">${problem.shortDesc}</p>
+            <div class="problem-details hidden">
+                <p>${problem.details}</p>
             </div>
-        `).join('');
+        </div>
+    `).join('');
 
-        // 添加点击事件
-        document.querySelectorAll('.problem-card').forEach(card => {
-            card.addEventListener('click', () => {
-                const details = card.querySelector('.problem-details');
-                details.classList.toggle('hidden');
-                card.classList.toggle('expanded');
-            });
+    // 为每个问题卡片添加点击事件
+    document.querySelectorAll('.problem-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const details = card.querySelector('.problem-details');
+            details.classList.toggle('hidden');
+            card.classList.toggle('expanded');
         });
-    };
-
-    // 初始化页面
-    const init = () => {
-        initProblemsList();
-    };
-
-    // 执行初始化
-    init();
+    });
 });
