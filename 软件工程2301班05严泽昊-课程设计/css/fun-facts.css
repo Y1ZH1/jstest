@@ -1,0 +1,412 @@
+/* 趣味知识页面样式 */
+
+/* 趣味问答样式 */
+.quiz-container {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.quiz-progress {
+  background-color: var(--light-gray);
+  height: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(to right, var(--primary-light), var(--primary-color));
+  width: 0;
+  transition: width 0.5s ease;
+  border-radius: 5px;
+}
+
+.quiz-score {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: var(--primary-dark);
+}
+
+#quiz-cards {
+  position: relative;
+}
+
+.quiz-card {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 25px;
+  margin-bottom: 20px;
+  transition: var(--transition);
+  display: none;
+}
+
+.quiz-card.active {
+  display: block;
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-left: 4px solid var(--primary-color);
+}
+
+.quiz-card.completed {
+  opacity: 0.8;
+}
+
+.quiz-question h3 {
+  color: var(--primary-dark);
+  margin-bottom: 15px;
+  font-family: var(--font-heading);
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.option {
+  padding: 12px 15px;
+  background-color: var(--light-gray);
+  border: 1px solid var(--medium-gray);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: left;
+  font-size: 1rem;
+}
+
+.option:hover {
+  background-color: var(--medium-gray);
+  transform: translateY(-2px);
+}
+
+.option.correct {
+  background-color: #c8e6c9;
+  border-color: #4caf50;
+}
+
+.option.incorrect {
+  background-color: #ffcdd2;
+  border-color: #f44336;
+}
+
+.answer-explanation {
+  background-color: #e8f5e9;
+  padding: 15px;
+  border-radius: var(--border-radius);
+  margin-top: 15px;
+  border-left: 3px solid var(--primary-color);
+}
+
+.answer-explanation.hidden {
+  display: none;
+}
+
+.quiz-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: bold;
+}
+
+.nav-button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.nav-button:disabled {
+  background-color: var(--medium-gray);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.quiz-results {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 30px;
+  margin-top: 20px;
+  text-align: center;
+  display: none;
+  border-top: 5px solid var(--primary-color);
+}
+
+.quiz-results.show {
+  display: block;
+  animation: fadeIn 0.5s forwards;
+}
+
+.result-score {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin: 20px 0;
+}
+
+.result-message {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.share-results {
+  margin-top: 20px;
+}
+
+.share-button {
+  padding: 10px 20px;
+  background-color: #3b5998;
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  margin: 0 5px;
+  transition: var(--transition);
+}
+
+.share-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.share-button.twitter {
+  background-color: #1da1f2;
+}
+
+.share-button.whatsapp {
+  background-color: #25d366;
+}
+
+/* 体态健康小贴士样式 */
+.tips-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.tip-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+}
+
+.tip-card h3 {
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+}
+
+.tip-card p {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Vue互动问答样式 */
+.vue-questions {
+  margin-top: 2rem;
+}
+
+.question-filter {
+  margin-bottom: 2rem;
+}
+
+.question-filter label {
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+.question-filter select {
+  padding: 0.5rem;
+  border: 1px solid var(--medium-gray);
+  border-radius: var(--border-radius);
+  background-color: var(--white);
+}
+
+.questions-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.problem-item {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.problem-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  background-color: var(--light-gray);
+}
+
+.problem-header:hover {
+  background-color: var(--medium-gray);
+}
+
+.problem-header img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.problem-title-wrapper {
+  flex-grow: 1;
+}
+
+.click-hint {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-top: 0.5rem;
+}
+
+.toggle-icon {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-left: 1rem;
+}
+
+.problem-details {
+  padding: 1rem;
+  border-top: 1px solid var(--medium-gray);
+}
+
+.problem-details p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.problem-details h4 {
+  color: var(--primary-dark);
+  margin: 1rem 0;
+}
+
+.problem-details ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.problem-details li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .story-content {
+    font-size: 0.95rem;
+  }
+  
+  .story-content img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .problem-header h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* 消息提示样式 */
+.message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    z-index: 1000;
+    animation: slideDown 0.3s ease-out;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.message.success {
+    background-color: #43e97b;
+    color: white;
+}
+
+.message.error {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translate(-50%, -100%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}
+
+/* 答案解释样式 */
+.answer-explanation {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #43e97b;
+    transition: all 0.3s ease;
+}
+
+.answer-explanation.hidden {
+    display: none;
+}
+
+/* 选项样式增强 */
+.option {
+    transition: all 0.3s ease;
+}
+
+.option.correct {
+    background-color: #43e97b !important;
+    color: white !important;
+    border-color: #43e97b !important;
+}
+
+.option.incorrect {
+    background-color: #ff6b6b !important;
+    color: white !important;
+    border-color: #ff6b6b !important;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

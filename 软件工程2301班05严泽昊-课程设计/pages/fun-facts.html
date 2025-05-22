@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>趣味知识 - 青少年体态健康</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/fun-facts.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>青少年体态健康中心</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="habits.html">生活习惯建议</a></li>
+                    <li><a href="diet.html">饮食与体态</a></li>
+                    <li><a href="fun-facts.html" class="active">趣味知识</a></li>
+                    <li><a href="consultation.html">体态问题咨询</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>趣味体态知识</h2>
+                <p>通过有趣的方式了解体态健康知识，让学习变得轻松愉快！</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2 class="section-title">体态健康小贴士</h2>
+
+            <div class="tips-container">
+                <div class="tip-card">
+                    <h3>你知道吗？</h3>
+                    <p>人体脊柱由33块椎骨组成，但成年后只有24块是可活动的。其中7块颈椎、12块胸椎和5块腰椎。剩下的椎骨在成年后融合成骶骨和尾骨。</p>
+                </div>
+
+                <div class="tip-card">
+                    <h3>你知道吗？</h3>
+                    <p>低头看手机时，颈部承受的压力会显著增加。当头部前倾60度时，颈部承受的压力相当于约27公斤，是头部重量的5-6倍！</p>
+                </div>
+
+                <div class="tip-card">
+                    <h3>你知道吗？</h3>
+                    <p>人体约60%的肌肉附着在脊柱上。保持这些肌肉的平衡和力量对维持良好体态至关重要。</p>
+                </div>
+
+                <div class="tip-card">
+                    <h3>你知道吗？</h3>
+                    <p>青春期是脊柱侧弯发展最快的时期，女生比男生更容易受到影响。定期检查和早期干预可以有效控制脊柱侧弯的发展。</p>
+                </div>
+
+                <div class="tip-card">
+                    <h3>你知道吗？</h3>
+                    <p>人体身高在一天中会有所变化。早晨起床时比晚上睡前高约1-2厘米，这是因为椎间盘在夜间休息时吸收水分，增加了脊柱长度。</p>
+                </div>
+
+                <div class="tip-card">
+                    <h3>你知道吗？</h3>
+                    <p>笑声对体态有益！大笑时，腹部和背部肌肉会收缩，这是一种自然的核心肌群训练，有助于维持良好的体态。</p>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <h2 class="section-title">常见体态问题</h2>
+
+            <div id="vue-questions-app" class="vue-questions">
+                <div class="question-filter">
+                    <label for="category-filter">选择问题类别：</label>
+                    <select id="category-filter" v-model="selectedCategory">
+                        <option value="all">全部问题</option>
+                        <option v-for="category in categories" :value="category">{{ category }}</option>
+                    </select>
+                </div>
+
+                <div class="questions-list">
+                    <div v-for="(problem, index) in filteredProblems" :key="index" class="problem-item">
+                        <div class="problem-header" @click="toggleDetails(index)">
+                            <img :src="'../photos/' + problem.image" :alt="problem.title + '示意图'">
+                            <div class="problem-title-wrapper">
+                                <h3>{{ problem.title }}</h3>
+                                <p class="click-hint">{{ problem.isOpen ? '点击收起详情 ▲' : '点击查看更多 ▼' }}</p>
+                            </div>
+                            <span class="toggle-icon">{{ problem.isOpen ? '−' : '+' }}</span>
+                        </div>
+                        <div v-if="problem.isOpen" class="problem-details">
+                            <p><strong>定义：</strong>{{ problem.definition }}</p>
+                            <p><strong>成因：</strong>{{ problem.causes }}</p>
+                            <p><strong>表现：</strong>{{ problem.symptoms }}</p>
+                            <p><strong>危害：</strong>{{ problem.risks }}</p>
+                            <h4>改善建议：</h4>
+                            <ul>
+                                <li v-for="(suggestion, sIndex) in problem.suggestions" :key="sIndex">{{ suggestion }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 青少年体态健康中心. 保留所有权利.</p>
+            <p>当前时间：<span id="footer-time"></span></p>
+        </div>
+    </footer>
+
+    <script src="../js/common.js" defer></script>
+    <script src="../js/fun-facts.js"></script>
+</body>
+</html>
