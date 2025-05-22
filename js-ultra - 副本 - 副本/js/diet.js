@@ -5,10 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // 获取结果展示区域元素
     const resultsSection = document.getElementById('results');
     
-    /**
-     * 表单验证函数
-     * @returns {boolean} 表单是否有效
-     */
     const validateForm = () => {
         let isValid = true; // 默认假设表单有效
         
@@ -46,22 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
         return isValid; // 返回验证结果
     };
     
-    /**
-     * 计算BMI值
-     * @param {number} height - 身高(厘米)
-     * @param {number} weight - 体重(公斤)
-     * @returns {number} BMI值
-     */
+
     const calculateBMI = (height, weight) => {
         const heightInMeters = height / 100; // 将厘米转换为米
         return weight / (heightInMeters * heightInMeters); // BMI公式: 体重(kg)/身高(m)^2
     };
-    
-    /**
-     * 根据BMI值获取健康状态
-     * @param {number} bmi - BMI值
-     * @returns {string} 健康状态描述
-     */
+
     const getBMIStatus = (bmi) => {
         if (bmi < 18.5) {
             return '体重过轻';
