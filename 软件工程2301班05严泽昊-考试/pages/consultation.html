@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>体态问题咨询 - 青少年体态健康</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/consultation.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>青少年体态健康中心</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="habits.html">生活习惯建议</a></li>
+                    <li><a href="diet.html">饮食与体态</a></li>
+                    <li><a href="fun-facts.html">趣味知识</a></li>
+                    <li><a href="consultation.html" class="active">体态问题咨询</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>体态问题智能咨询</h2>
+                <p>有任何关于体态健康的问题？我们的AI助手随时为您解答！</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2 class="section-title">AI体态顾问</h2>
+
+            <div class="consultation-container">
+                <div id="chat-container"></div>
+
+                <div id="input-area">
+                    <input type="text" id="user-input" placeholder="输入你的体态健康问题..." autocomplete="off">
+                    <button id="send-button">发送</button>
+                </div>
+
+                <div id="status">准备就绪</div>
+
+                <div class="consultation-tips">
+                    <h3>你可以问我这些问题：</h3>
+                    <ul>
+                        <li>如何改善驼背问题？</li>
+                        <li>长时间学习如何保护脊柱？</li>
+                        <li>高低肩应该如何矫正？</li>
+                        <li>什么运动对改善体态最有效？</li>
+                        <li>脊柱侧弯的早期症状？</li>
+                        <li>如何选择适合青少年的书包？</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 青少年体态健康中心. 保留所有权利.</p>
+            <p>当前时间：<span id="footer-time"></span></p>
+        </div>
+    </footer>
+
+    <script src="../js/common.js" defer></script>
+    <script src="../js/consultation.js" defer></script>
+</body>
+
+</html>

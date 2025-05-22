@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>饮食与体态 - 青少年体态健康</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/diet.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>青少年体态健康中心</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="habits.html">生活习惯建议</a></li>
+                    <li><a href="diet.html" class="active">饮食与体态</a></li>
+                    <li><a href="fun-facts.html">趣味知识</a></li>
+                    <li><a href="consultation.html">体态问题咨询</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>营养均衡，体态健康</h2>
+                <p>良好的饮食习惯是维持健康体态的基础。了解如何通过合理饮食支持骨骼和肌肉发育，预防体态问题。</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2 class="section-title">BMI计算器</h2>
+
+            <div class="nutrition-calculator">
+                <h3>青少年BMI计算器</h3>
+                <p>根据你的身高和体重，计算你的BMI指数，帮助你了解自己的体重状况。</p>
+
+                <form id="bmi-form" class="calculator-form">
+                    <div class="form-group">
+                        <label for="height">身高 (厘米)</label>
+                        <input type="number" id="height" min="100" max="220" required>
+                        <div id="height-error" class="error-message"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="weight">体重 (公斤)</label>
+                        <input type="number" id="weight" min="25" max="120" required>
+                        <div id="weight-error" class="error-message"></div>
+                    </div>
+
+                    <button type="submit" class="calculator-button">计算BMI</button>
+                </form>
+
+                <div id="results" class="results">
+                    <h3>你的BMI指数</h3>
+
+                    <div class="result-cards">
+                        <div class="result-card">
+                            <h4>BMI指数</h4>
+                            <div class="result-value" id="bmi-result">0</div>
+                            <p>kg/m²</p>
+                        </div>
+
+                        <div class="result-card">
+                            <h4>体重状况</h4>
+                            <div class="result-value" id="bmi-status">-</div>
+                            <p>评估结果</p>
+                        </div>
+                    </div>
+
+                    <div class="bmi-reference">
+                        <h4>BMI参考范围（青少年）</h4>
+                        <ul>
+                            <li>体重过轻：BMI < 18.5</li>
+                            <li>正常范围：18.5 ≤ BMI < 24</li>
+                            <li>超重：24 ≤ BMI < 28</li>
+                            <li>肥胖：BMI ≥ 28</li>
+                        </ul>
+                        <p class="note">注意：BMI指数仅供参考，具体健康状况请咨询专业医生。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2 class="section-title">体态健康关键营养素</h2>
+
+            <div class="nutrition-cards">
+                <div class="nutrition-card">
+                    <img src="../photos/PROTEIN.jpg" alt="蛋白质食物">
+                    <h3>蛋白质</h3>
+                    <p><strong>作用：</strong>蛋白质是肌肉的主要构成成分，对维持良好体态至关重要。充足的蛋白质摄入有助于肌肉发育和修复，支持脊柱和姿势。</p>
+                    <p><strong>推荐食物：</strong></p>
+                    <ul>
+                        <li>瘦肉（鸡胸肉、牛肉）</li>
+                        <li>鱼类（三文鱼、金枪鱼）</li>
+                        <li>蛋类</li>
+                        <li>豆制品（豆腐、豆浆）</li>
+                        <li>坚果和种子</li>
+                    </ul>
+                    <p><strong>每日建议：</strong>青少年每公斤体重需要1.2-1.7克蛋白质。</p>
+                </div>
+
+                <div class="nutrition-card">
+                    <img src="../photos/CA.jpg" alt="钙质食物">
+                    <h3>钙质</h3>
+                    <p><strong>作用：</strong>钙是骨骼的主要成分，对青少年骨骼发育和维持骨密度至关重要。充足的钙摄入有助于预防骨质疏松和脊柱问题。</p>
+                    <p><strong>推荐食物：</strong></p>
+                    <ul>
+                        <li>奶制品（牛奶、酸奶、奶酪）</li>
+                        <li>豆制品（豆腐、豆浆）</li>
+                        <li>深绿色蔬菜（西兰花、小白菜）</li>
+                        <li>坚果（杏仁）</li>
+                        <li>小鱼干</li>
+                    </ul>
+                    <p><strong>每日建议：</strong>青少年每日需要1300毫克钙。</p>
+                </div>
+
+                <div class="nutrition-card">
+                    <img src="../photos/VTAMIN-D.jpg" alt="维生素D食物">
+                    <h3>维生素D</h3>
+                    <p><strong>作用：</strong>维生素D帮助身体吸收钙质，对骨骼健康至关重要。缺乏维生素D会导致骨骼软化和变形，影响体态。</p>
+                    <p><strong>推荐食物：</strong></p>
+                    <ul>
+                        <li>阳光照射（最佳来源）</li>
+                        <li>鱼肝油</li>
+                        <li>脂肪鱼类（三文鱼、沙丁鱼）</li>
+                        <li>蛋黄</li>
+                        <li>强化食品（牛奶、谷物）</li>
+                    </ul>
+                    <p><strong>每日建议：</strong>青少年每日需要600国际单位维生素D。</p>
+                </div>
+
+                <div class="nutrition-card">
+                    <img src="../photos/MG.jpg" alt="镁食物">
+                    <h3>镁</h3>
+                    <p><strong>作用：</strong>镁参与300多种酶的活动，对肌肉功能和骨骼健康至关重要。充足的镁摄入有助于肌肉放松，减少痉挛。</p>
+                    <p><strong>推荐食物：</strong></p>
+                    <ul>
+                        <li>全谷物（糙米、燕麦）</li>
+                        <li>绿叶蔬菜（菠菜、羽衣甘蓝）</li>
+                        <li>坚果和种子（南瓜籽、杏仁）</li>
+                        <li>豆类（黑豆、鹰嘴豆）</li>
+                        <li>香蕉</li>
+                    </ul>
+                    <p><strong>每日建议：</strong>青少年每日需要240-410毫克镁。</p>
+                </div>
+
+                <div class="nutrition-card">
+                    <img src="../photos/VTAMIN-K.jpg" alt="维生素K食物">
+                    <h3>维生素K</h3>
+                    <p><strong>作用：</strong>维生素K对骨骼健康至关重要，它帮助钙质结合到骨骼中。缺乏维生素K可能导致骨质疏松和骨折风险增加。</p>
+                    <p><strong>推荐食物：</strong></p>
+                    <ul>
+                        <li>绿叶蔬菜（羽衣甘蓝、菠菜）</li>
+                        <li>西兰花</li>
+                        <li>布鲁塞尔芽</li>
+                        <li>卷心菜</li>
+                        <li>植物油（大豆油、菜籽油）</li>
+                    </ul>
+                    <p><strong>每日建议：</strong>青少年每日需要75-120微克维生素K。</p>
+                </div>
+
+                <div class="nutrition-card">
+                    <img src="../photos/WATER.jpg" alt="水分">
+                    <h3>水分</h3>
+                    <p><strong>作用：</strong>充足的水分摄入对维持椎间盘健康至关重要。椎间盘中的水分有助于缓冲脊柱压力，保持脊柱灵活性。</p>
+                    <p><strong>推荐饮品：</strong></p>
+                    <ul>
+                        <li>清水（最佳选择）</li>
+                        <li>淡茶</li>
+                        <li>低糖果汁</li>
+                        <li>含水量高的水果（西瓜、橙子）</li>
+                        <li>含水量高的蔬菜（黄瓜、西红柿）</li>
+                    </ul>
+                    <p><strong>每日建议：</strong>青少年每日需要8-10杯水（约2-2.5升）。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2 class="section-title">饮食误区</h2>
+        
+            <div class="diet-mistakes">
+                <div class="mistake">
+                    <h3>误区一：过度节食会改善体态</h3>
+                    <div class="mistake-content">
+                        <div class="mistake-text">
+                            <p><strong>错误观念：</strong>许多青少年认为减少食物摄入量可以快速减轻体重，改善体态。</p>
+                            <p><strong>真相：</strong>过度节食会导致营养不良，影响骨骼和肌肉发育，反而会损害体态健康。青少年正处于生长发育阶段，需要充足的营养支持。</p>
+                            <p><strong>正确做法：</strong></p>
+                            <ul>
+                                <li>保持均衡饮食，确保各类营养素的摄入</li>
+                                <li>适量控制高糖、高脂食物的摄入</li>
+                                <li>增加体育活动，而不是减少食物摄入</li>
+                                <li>如需减重，应在专业人士指导下进行</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="mistake">
+                    <h3>误区二：补钙只需要多喝牛奶</h3>
+                    <div class="mistake-content">
+                        <div class="mistake-text">
+                            <p><strong>错误观念：</strong>很多人认为补钙只需要多喝牛奶，忽视了其他钙源和影响钙吸收的因素。</p>
+                            <p><strong>真相：</strong>虽然牛奶是良好的钙源，但钙的吸收还受到维生素D、镁等多种因素的影响。单纯增加牛奶摄入而忽视其他因素，可能导致钙吸收不良。</p>
+                            <p><strong>正确做法：</strong></p>
+                            <ul>
+                                <li>多样化钙源，包括奶制品、豆制品、绿叶蔬菜等</li>
+                                <li>确保充足的维生素D摄入，促进钙吸收</li>
+                                <li>适当进行户外活动，获取阳光照射</li>
+                                <li>避免过量摄入含磷酸盐的碳酸饮料，它们会影响钙吸收</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="mistake">
+                    <h3>误区三：蛋白质越多越好</h3>
+                    <div class="mistake-content">
+                        <div class="mistake-text">
+                            <p><strong>错误观念：</strong>一些青少年，特别是男生，认为摄入大量蛋白质可以快速增长肌肉，改善体态。</p>
+                            <p><strong>真相：</strong>过量摄入蛋白质不仅不会额外增加肌肉，还会增加肾脏负担，可能导致钙流失，反而影响骨骼健康。</p>
+                            <p><strong>正确做法：</strong></p>
+                            <ul>
+                                <li>根据个人体重和活动水平，摄入适量蛋白质</li>
+                                <li>选择优质蛋白质来源，如瘦肉、鱼类、蛋类和豆制品</li>
+                                <li>均衡摄入各类营养素，而不是单一强调蛋白质</li>
+                                <li>通过适当的力量训练，而不是过量蛋白质，来促进肌肉发育</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 青少年体态健康中心. 保留所有权利.</p>
+            <p>当前时间：<span id="footer-time"></span></p>
+        </div>
+    </footer>
+
+    <script src="../js/common.js" defer></script>
+    <script src="../js/diet.js" defer></script>
+</body>
+
+</html>
